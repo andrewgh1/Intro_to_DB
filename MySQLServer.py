@@ -14,14 +14,14 @@ DATABASE_NAME = "alx_book_store"
 #Function to create the database
 def create_database(cursor):
     try :
-        cursor.execute(f'CREATE DATABASE IF NOT EXISTS {DATABASE_NAME}')
-        print(f"Database {DATABASE_NAME} successfully created")
+        cursor.execute(f'CREATE DATABASE IF NOT EXISTS alx_book_store')
+        print(f"Database alx_book_store successfully created")
 
     except mysql.connector.Error as Err:
         if Err.errno == errorcode.ER_DB_CREATE_EXISTS:
-            print(f"Database {DATABASE_NAME} already exists")
+            print(f"Database alx_book_store already exists")
         else:
-            print(f"Failed to create database {DATABASE_NAME}: {Err}")
+            print(f"Failed to create database alx_book_store: {Err}")
 
 def main():
 
